@@ -7,7 +7,7 @@ const Star = new Schema(
         name: { type: String, required: true },
         mass: { type: Number, required: true },
         planetpop: { type: Number, required: true },
-        galaxy: { type: ObjectId, ref: 'Galaxy', required: true },
+        galaxyId: { type: ObjectId, ref: 'Galaxy', required: true },
     }
 );
 
