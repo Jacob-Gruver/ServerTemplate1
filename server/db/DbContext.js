@@ -2,7 +2,7 @@ import ValueSchema from "../models/Value";
 import UniverseSchema from '../models/Universe.js'
 import GalaxySchema from "../models/Galaxy.js";
 import StarSchema from "../models/Star.js";
-import PlanetSchema from '../models/'
+import PlanetSchema from '../models/Planet.js'
 
 import mongoose from "mongoose";
 
@@ -14,6 +14,8 @@ class DbContext {
   Galaxies = mongoose.model("Galaxy", GalaxySchema);
 
   Stars = mongoose.model("Star", StarSchema);
+
+  Planet = mongoose.model("Planet", PlanetSchema)
 
 
 }
