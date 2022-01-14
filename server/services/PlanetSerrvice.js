@@ -6,3 +6,5 @@ class PlanetService {
         return await dbContext.Planets.find(query)
     }
 }
+
+export const planetService = new PlanetService()
