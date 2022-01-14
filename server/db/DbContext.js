@@ -9,13 +9,13 @@ import mongoose from "mongoose";
 class DbContext {
   Values = mongoose.model("Value", ValueSchema);
 
-  Universe = mongoose.model("Universe", UniverseSchema)
+  Universes = mongoose.model("Universe", UniverseSchema)
 
   Galaxies = mongoose.model("Galaxy", GalaxySchema);
 
   Stars = mongoose.model("Star", StarSchema);
 
-  Planet = mongoose.model("Planet", PlanetSchema)
+  Planets = mongoose.model("Planet", PlanetSchema)
 
 
 }
