@@ -3,6 +3,6 @@ import { dbContext } from "../db/DbContext";
 class PlanetService {
 
     async find(query = {}) {
-        return await dbContext.Planet
+        return await dbContext.Planets.find(query)
     }
 }
