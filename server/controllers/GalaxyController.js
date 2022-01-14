@@ -12,21 +12,21 @@ export class GalaxyController extends BaseController {
   }
   async getAll(req, res, next) {
     try {
-      return res.send( await galaxyService.find(req.query));
+      return res.send(await galaxyService.find(req.query));
     } catch (error) {
       next(error);
     }
   }
   async get(req, res, next) {
     try {
-      return res.send( await galaxyService.findOne(req.params.id));
+      return res.send(await galaxyService.findOne(req.params.id));
     } catch (error) {
       next(error);
     }
   }
   async create(req, res, next) {
     try {
-      return res.send( await galaxyService.create(req.body));
+      return res.send(await galaxyService.create(req.body));
     } catch (error) {
       next(error);
     }
