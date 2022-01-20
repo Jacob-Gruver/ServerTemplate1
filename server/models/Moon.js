@@ -5,6 +5,8 @@ const Schema = mongoose.Schema
 const Moon = new Schema(
     {
         name: { type: String, required: true, default: 'unknown' },
+        mass: { type: Number, required: true },
+
 
     }
 
