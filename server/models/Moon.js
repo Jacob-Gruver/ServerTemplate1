@@ -14,4 +14,4 @@ const Moon = new Schema(
 
 
 export default Moon
-
+// export by default instance of mew Schema Moon
