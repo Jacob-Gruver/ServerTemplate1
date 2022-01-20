@@ -18,7 +18,7 @@ class DbContext {
 
   Planets = mongoose.model("Planet", PlanetSchema)
 
-  Moon = mongoose.model("Moon", MoonSchema)
+  Moons = mongoose.model("Moon", MoonSchema)
 
 }
 
