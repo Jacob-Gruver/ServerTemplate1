@@ -4,7 +4,7 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const Star = new Schema(
     {
-        name: { type: String, required: true },
+        name: { type: String, required: true, default: 'unknown' },
         mass: { type: Number, required: true },
         color: { type: String, required: true, enum: ['blue', 'white', 'yellow', 'Orange', 'Red'] },
         type: { type: String, required: true, enum: ['main sequence', 'dwarf', 'giant', 'supergiant'], default: 'main sequence' },
