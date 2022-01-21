@@ -1,12 +1,13 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
+const objectId = mongoose.Schema.Types.ObjectId
 
 const Galaxy = new Schema(
     {
         name: { type: String, required: true },
-        // universe: {type: objectId, }
         mass: { type: Number, required: true },
-        starpop: { type: Number, required: true }
+        starpop: { type: Number, required: true },
+        universeId: { type: objectId, ref: 'Universe', required: true }
     }
 
 );

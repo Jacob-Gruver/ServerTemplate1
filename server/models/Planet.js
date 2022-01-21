@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema
+const ObjectId = mongoose.Types.ObjectId
 
 const Planet = new Schema(
     {
@@ -7,7 +8,8 @@ const Planet = new Schema(
         mass: { type: Number, required: true },
         moons: { type: Number, required: true, default: 0 },
         government: { type: String, required: true, enum: ['dictatorship', 'republic', 'empirical', 'mixed', 'primitive', 'n/a'], default: 'n/a' },
-        species: { type: String, required: true, default: 'n/a' }
+        species: { type: String, required: true, default: 'n/a' },
+        starId: { type: ObjectId, ref: 'Star', required: true }
     }
 )
 
