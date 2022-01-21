@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const Universe = new Schema(
     {
-        name: { type: String, required: true, default: generateCodeName },
+        name: { type: String, required: true, default: generateCodeName('u') },
         galacticWeb: { type: String, required: true, enum: ['spiral', 'tree', 'web'], default: 'web' },
         galaxypop: { type: Number, required: true }
     }

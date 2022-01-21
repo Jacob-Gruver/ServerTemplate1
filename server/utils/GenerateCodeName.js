@@ -1,11 +1,27 @@
-export const generateCodeName = function () {
+// export const generateCodeName = function () {
+//     var out = ''
+//     var charChoice =
+//         'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_`/'
+//     var charLength = charChoice.length
+//     for (let i = 0; i < 6; i++) {
+//         out += charChoice.charAt(Math.floor(Math.random() * charLength))
+//     }
+//     return out
+
+// }
+
+export const generateCodeName = function (type) {
     var out = ''
     var charChoice =
-        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_`/'
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     var charLength = charChoice.length
     for (let i = 0; i < 6; i++) {
         out += charChoice.charAt(Math.floor(Math.random() * charLength))
     }
-    return out
+    if (type == 'u') {
+        return 'Horizon_' + out
+    } else {
+        return out
+    }
 
 }
