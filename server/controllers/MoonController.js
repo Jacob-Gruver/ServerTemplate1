@@ -6,6 +6,8 @@ export class MoonController extends BaseController {
     constructor() {
         super('api/moons')
         this.router
+            .get("", this.getAll)
+            .post("", this.create)
     }
     async getAll(req, res, next) {
         try {
