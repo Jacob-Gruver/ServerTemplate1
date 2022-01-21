@@ -3,11 +3,11 @@ import { dbContext } from "../db/DbContext";
 class UniverseService {
 
     async find(query = {}) {
-        return await dbContext.Universe.find(query)
+        return await dbContext.Universes.find(query)
     }
 
     async create(body) {
-        return await dbContext.Universe.create(body)
+        return await dbContext.Universes.create(body)
     }
 }
 
