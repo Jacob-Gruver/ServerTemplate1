@@ -6,6 +6,7 @@ const Star = new Schema(
     {
         name: { type: String, required: true },
         mass: { type: Number, required: true },
+        color: { type: String, required: true, enum: ['blue', 'white', 'yellow', 'Orange', 'Red'] },
         planetpop: { type: Number, required: true },
         galaxyId: { type: ObjectId, ref: 'Galaxy', required: true }
     }
