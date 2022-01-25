@@ -7,6 +7,7 @@ export class MoonController extends BaseController {
         super('api/moons')
         this.router
             .get("", this.getAll)
+            .get("/:id", this.get)
             .post("", this.create)
     }
     async getAll(req, res, next) {
@@ -16,6 +17,16 @@ export class MoonController extends BaseController {
             next(error)
         }
     }
+
+    async get(req, res, next) {
+        try {
+            return res.send(await moonService.findOne(req.params.id))
+        } catch (error) {
+            next(error)
+        }
+    }
+
+
     async create(req, res, next) {
         try {
             return res.send(await moonService.create(req.body))
