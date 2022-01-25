@@ -7,12 +7,21 @@ export class UniverseController extends BaseController {
         super('api/universes');
         this.router
             .get("", this.getAll)
+            .get("/:id", this.get)
             .post("", this.create)
     }
 
     async getAll(req, res, next) {
         try {
             return res.send(await universeService.find(req.query))
+        } catch (error) {
+            next(error)
+        }
+    }
+
+    async get(req, res, next) {
+        try {
+            return res.send(await universeService.findOne(req.params.id))
         } catch (error) {
             next(error)
         }

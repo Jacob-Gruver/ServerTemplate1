@@ -6,6 +6,10 @@ class UniverseService {
         return await dbContext.Universes.find(query)
     }
 
+    async findOne(id) {
+        return await dbContext.Universes.findById(id)
+    }
+
     async create(body) {
         return await dbContext.Universes.create(body)
     }
