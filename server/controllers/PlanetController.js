@@ -18,6 +18,14 @@ export class PlanetController extends BaseController {
         }
     }
 
+    async get(req, res, next) {
+        try {
+            return res.send(await planetService.findOne(req.params.id))
+        } catch (error) {
+            next(error)
+        }
+    }
+
     async create(req, res, next) {
         try {
             return res.send(await planetService.create(req.body))
