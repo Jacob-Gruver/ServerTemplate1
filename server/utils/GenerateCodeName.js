@@ -8,6 +8,8 @@ export const generateCodeName = function (type) {
     }
     if (type == 'u') {
         return 'Horizon_' + out
+    } else if (type == 'g') {
+        return 'Galaxy_' + out
     } else {
         return out
     }
