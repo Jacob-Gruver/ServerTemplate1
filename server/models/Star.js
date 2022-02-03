@@ -1,11 +1,10 @@
 import mongoose from "mongoose";
-import { generateCodeName } from "../utils/GenerateCodeName";
 const Schema = mongoose.Schema;
 const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const Star = new Schema(
     {
-        name: { type: String, required: true, default: generateCodeName },
+        name: { type: String, required: true },
         mass: { type: Number, required: true },
         color: { type: String, required: true, enum: ['blue', 'white', 'yellow', 'Orange', 'Red'] },
         type: { type: String, required: true, enum: ['main sequence', 'dwarf', 'giant', 'supergiant'], default: 'main sequence' },
