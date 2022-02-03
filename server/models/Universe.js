@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-// import { generateCodeName } from "../utils/GenerateCodeName"
 const Schema = mongoose.Schema;
 
 const Universe = new Schema(
