@@ -1,4 +1,3 @@
-import express, { query } from "express";
 import BaseController from "../utils/BaseController";
 import { galaxyService } from "../services/GalaxyService";
 // import { starService } from "../services/StarService"
