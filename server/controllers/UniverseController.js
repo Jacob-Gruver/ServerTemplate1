@@ -1,7 +1,7 @@
 import express, { query } from "express"
 import BaseController from "../utils/BaseController"
 import { universeService } from '../services/UniverseService'
-import { galaxyService } from "../services/GalaxyService"
+// import { galaxyService } from "../services/GalaxyService"
 
 export class UniverseController extends BaseController {
     constructor() {
@@ -9,7 +9,7 @@ export class UniverseController extends BaseController {
         this.router
             .get("", this.getAll)
             .get("/:id", this.get)
-            .get("/:id/galaxies", this.getGalaxies)
+            // .get("/:id/galaxies", this.getGalaxies)
             .post("", this.create)
     }
 
@@ -29,14 +29,14 @@ export class UniverseController extends BaseController {
         }
     }
 
-    async getGalaxies(req, res, next) {
-        try {
-            const galaxyData = await galaxyService.find({ Universe: req.params.id })
-            return res.send(galaxyData)
-        } catch (error) {
-            next(error)
-        }
-    }
+    // async getGalaxies(req, res, next) {
+    //     try {
+    //         const galaxyData = await galaxyService.find({ Universe: req.params.id })
+    //         return res.send(galaxyData)
+    //     } catch (error) {
+    //         next(error)
+    //     }
+    // }
 
     async create(req, res, next) {
         try {
