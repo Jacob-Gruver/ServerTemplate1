@@ -30,7 +30,7 @@ export class UniverseController extends BaseController {
 
     async getGalaxies(req, res, next) {
         try {
-            const galaxyData = await galaxyService.find({ Universe: req.params.id })
+            const galaxyData = await galaxyService.find({ universeId: req.params.id })
             return res.send(galaxyData)
         } catch (error) {
             next(error)
