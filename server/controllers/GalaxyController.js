@@ -1,6 +1,7 @@
-import BaseController from "../utils/BaseController";
-import { galaxyService } from "../services/GalaxyService";
+import BaseController from "../utils/BaseController"
+import { galaxyService } from "../services/GalaxyService"
 import { starService } from "../services/StarService"
+import { nebulaService } from "../services/NebulaService"
 
 export class GalaxyController extends BaseController {
   constructor() {
@@ -9,6 +10,7 @@ export class GalaxyController extends BaseController {
       .get("", this.getAll)
       .get("/:id", this.get)
       .get("/:id/stars", this.getStars)
+      .get("/:id/nebulas", this.getNebulas)
       .post("", this.create);
   }
   async getAll(req, res, next) {
@@ -29,6 +31,14 @@ export class GalaxyController extends BaseController {
     try {
       const starData = await starService.find({ galaxyId: req.params.id })
       return res.send(starData)
+    } catch (error) {
+      next(error)
+    }
+  }
+  async getNebulas(req, res, next) {
+    try {
+      const nebulaData = await nebulaService.find({ galaxyId: req.params.id })
+      return res.send(nebulaData)
     } catch (error) {
       next(error)
     }
