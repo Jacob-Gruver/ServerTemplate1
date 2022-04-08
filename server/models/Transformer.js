@@ -21,3 +21,5 @@ const Transformer = new Schema(
         // imgURL: { type: String, required: true, default: 'https://clipartart.com/images/free-clipart-black-and-white-electronic-cog.jpg' }
     }
 )
+
+export default Transformer
