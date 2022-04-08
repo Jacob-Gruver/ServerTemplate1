@@ -1,5 +1,4 @@
 import { dbContext } from '../db/DbContext'
-// import { BadRequest } from '../utils/Errors'
 
 class TfService {
     async getRobots(query = {}) {
