@@ -1,4 +1,4 @@
-import { transformerService } from '../services/TfService'
+import { tfService } from '../services/TfService'
 import BaseController from '../utils/BaseController'
 
 export class TransformerController extends BaseController {
@@ -12,7 +12,7 @@ export class TransformerController extends BaseController {
 
     async getRobots(req, res, next) {
         try {
-            const roBots = await transformerService.getRobots(req.query)
+            const roBots = await tfService.getRobots(req.query)
             return res.send(roBots)
         } catch (error) {
             next(error)
@@ -21,7 +21,7 @@ export class TransformerController extends BaseController {
 
     async getOne(req, res, next) {
         try {
-            const roBot = await transformerService.getOne(req.params.id)
+            const roBot = await tfService.getOne(req.params.id)
             return res.send(roBot)
         } catch (error) {
             next(error)
@@ -30,7 +30,7 @@ export class TransformerController extends BaseController {
 
     async create(req, res, next) {
         try {
-            const newBot = await transformerService.create(req.body)
+            const newBot = await tfService.create(req.body)
             res.send(newBot)
         } catch (error) {
             next(error)
